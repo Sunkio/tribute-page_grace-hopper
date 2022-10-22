@@ -1,3 +1,30 @@
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--system-ui);
+    font-size: 18px;
+    line-height: 1.5;
+    color: #26291b;
+    min-height: 100%;
+    text-align: center;
+}
+
+body {
+    background: -webkit-linear-gradient(left top, #c4c4c4, #c79642, #c4c4c4); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #c4c4c4, #c79642, #c4c4c4); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #c4c4c4, #c79642, #c4c4c4); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #c4c4c4, #c79642, #c4c4c4); /* Standard syntax (must be last) */       %); /* Standard syntax */
+}
+
 #image {
     margin: auto;
     max-width: 100%;
