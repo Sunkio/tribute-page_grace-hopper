@@ -3,12 +3,6 @@
     "Segoe UI Symbol";
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 html {
     font-family: var(--system-ui);
     font-size: 18px;
@@ -16,13 +10,32 @@ html {
     color: #26291b;
     min-height: 100%;
     text-align: center;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background: -webkit-linear-gradient(left top, #c4c4c4, #c79642, #c4c4c4); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom right, #c4c4c4, #c79642, #c4c4c4); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom right, #c4c4c4, #c79642, #c4c4c4); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, #c4c4c4, #c79642, #c4c4c4); /* Standard syntax (must be last) */       %); /* Standard syntax */
+    background: linear-gradient(to bottom right, #c4c4c4, #c79642, #c4c4c4);
+}
+
+#main {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 20px;
+}
+ul > li {
+    list-style: outside;
+    text-align: left;
+    line-height: 1.5em;
+    margin: 0 5% 2% 5%;
 }
 
 #image {
@@ -31,4 +44,17 @@ body {
     height: auto;
     display: block;
     text-align: center;
+    border: #26291b 3px solid;
+    border-radius: 10px;
+}
+
+#img-caption  {
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bottom-space {
+    margin-bottom: 2%;
 }
