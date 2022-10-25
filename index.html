@@ -9,17 +9,30 @@
     <link href="styles.css" rel="stylesheet">
 </head>
     <body>
+        <header class="top-nav">
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li><a href="#main" class="nav-link">Start</a></li>
+                <li><a href="#img-caption" class="nav-link">Timeline</a></li>
+                <li><a href="#quote" class="nav-link">Quote</a></li>
+            </ul>
+        </header>
         <main id="main">
-            <h1 id="title">Grace Hopper</h1>
-            <p class="bold bottom-space">Computer Scientist, Mathematician, United States Navy Rear Admiral - and
-                Developer of the First Computer Compiler</p>
-            <figure id="img-div" class="bottom-space">
-                <img src="images/Commodore_Grace_M._Hopper_USN.jpg" alt="Portrait of Grace Hopper in uniform in front of
-                    an USA flag" id="image">
-                <figcaption id="img-caption">Grace Hopper in 1984</figcaption>
-            </figure>
-            <div id="tribute-info">
-                <h2>A Timeline of Grace Hopper's Life Events</h2>
+            <section id="start">
+                <h1 id="title">Grace Hopper</h1>
+                <p class="bold bottom-space">Computer Scientist, Mathematician, United States Navy Rear Admiral - and
+                    Developer of the First Computer Compiler</p>
+                <figure id="img-div" class="bottom-space">
+                    <img src="images/Commodore_Grace_M._Hopper_USN.jpg" alt="Portrait of Grace Hopper in uniform in front of
+                        an USA flag" id="image">
+                    <figcaption id="img-caption">Grace Hopper in 1984</figcaption>
+                </figure>
+            </section>
+            <section id="tribute-info">
+                <h2>A Timeline of Grace Hopper's Life</h2>
                 <ul>
                     <li><strong>1906</strong> - born in New York City as the eldest of three children</li>
                     <li><strong>1928</strong> - graduates from Vassar College with a bachelor’s degree in mathematics
@@ -85,13 +98,18 @@
                     <li><strong>1992</strong> - dies at age 85 and is interred with full military honors in Arlington
                         National Cemetery (Virginia)</li>
                 </ul>
+            </section>
+            <section id="quote">
                 <h2>Quote</h2>
                 <blockquote class="bottom-space">"The most important thing I've accomplished, other than building the compiler is training young people.
                     They come to me, you know, and say, 'Do you think we can do this?' I say, 'Try it.' And I back 'em up.
                     They need that. I keep track of them as they get older and I stir 'em up at intervals, so they don't
                     forget to take chances."</blockquote>
-                <p class="bold">For more information about her, see <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank" id="tribute-link">Grace Hopper's Wikipedia page</a>.</p>
-            </div>
+                <cite>-- Grace Hopper</cite>
+            </section>
+            <section>
+                <p class="bold top-space">For more information about her, see <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank" id="tribute-link">Grace Hopper's Wikipedia page</a>.</p>
+            </section>
         </main>
     </body>
 </html>

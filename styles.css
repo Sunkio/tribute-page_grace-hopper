@@ -26,6 +26,23 @@ body {
     background: linear-gradient(to bottom right, #c4c4c4, #c79642, #c4c4c4);
 }
 
+#title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 2rem 1rem 0.5rem 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+blockquote {
+    margin: 0 5% 5% 5%;
+}
+
 #main {
     margin: 0 auto;
     max-width: 700px;
@@ -36,6 +53,10 @@ ul > li {
     text-align: left;
     line-height: 1.5em;
     margin: 0 5% 2% 5%;
+}
+
+a {
+    color: #26291b;
 }
 
 #image {
@@ -49,6 +70,7 @@ ul > li {
 }
 
 #img-caption  {
+    font-size: 0.9rem;
 }
 
 .bold {
@@ -58,3 +80,146 @@ ul > li {
 .bottom-space {
     margin-bottom: 2%;
 }
+
+.top-space {
+    margin-top: 1.5rem;
+}
+
+#tribute-link:visited{
+    color: #e0231d;
+}
+
+/* Nav Bar */
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #26291b;
+    color: #c4c4c4;
+    height: 50px;
+    padding: 1em;
+    position: fixed;
+    width: 100%
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.nav-link {
+    color: #c4c4c4;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #c79642;
+    text-decoration: underline;
+}
+
+.nav-link:active {
+    color: #c79642;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #c4c4c4;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+    .menu-button-container {
+        display: flex;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: #c4c4c4;
+        background-color: #26291b;
+    }
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #c4c4c4;
+    }
+}
+
+/* Nav bar end */
